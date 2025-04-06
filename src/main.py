@@ -1,15 +1,12 @@
 import os
-
+import cv2
 import numpy as np
-
-os.environ["LOKY_MAX_CPU_COUNT"] = "6"
-
 from slic import SLICSuperpixels
 from graph import GraphBuilder
 from seed import InteractiveSeedMarker
 from segmenter import GraphCutSegmenter
 
-import cv2
+os.environ["LOKY_MAX_CPU_COUNT"] = "6"
 
 if __name__ == "__main__":
     # --- Part A: SLIC Segmentation ---
